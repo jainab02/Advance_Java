@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+<title>Area of Circle Calculator</title>
+</head>
+<body>
+	<h:form>
+		<h:outputLabel for="radius">Enter the radius:</h:outputLabel>
+		<h:inputText id="radius" value="#{circleBean.radius}" required="true" />
+
+		<h:commandButton value="Calculate"
+			action="#{circleBean.calculateArea}" />
+
+		<h:outputText value="The area of the circle is: #{circleBean.area}"
+			rendered="#{not empty circleBean.area}" />
+	</h:form>
+</body>
+</html>
